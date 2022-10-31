@@ -3,8 +3,8 @@ import re
 
   ###########Read data from stdin ###############################################
 def read_in():
-    lines = sys.stdin.readlines()
-   # lines = ["Almuerzo amigos 50000"]
+   # lines = sys.stdin.readlines()
+    lines = ["Almuerzo amigos 50000"]
    #Since our input would only be having one line, parse our JSON data from that
     text, numbers= separate_text_numbers(lines[0])
     savexls(text, numbers)
@@ -44,7 +44,7 @@ def separate_text_numbers(original_text):
   
   ###############function to save in format xls######################
 def savexls(description, amount):
-  import pandas as pd
+  #import pandas as pd
   from datetime import datetime
   from openpyxl import load_workbook
 
@@ -55,14 +55,14 @@ def savexls(description, amount):
   #model_xls = pd.read_excel('filesxls/template_presupuesto.xlsx')
   #First time 
   # wb = load_workbook('filesxls/model_mother.xlsx')
-  wb = load_workbook('filesxls/personal_budget.xlsx')
-  ws = wb['Cash_Spent']
+  wb = load_workbook('filesxls/model_mother.xlsx')
+  ws = wb['Hoja1']
   ws.insert_rows(5)
   ws['B5'] = current_day
   ws['C5'] = current_time
   ws['D5'] = description
   ws['E5'] = amount
-  ws['F5'] = 'Gastos'
+  ws['F5'] = 'Gasto'
  
   wb.save('filesxls/personal_budget.xlsx')
  
