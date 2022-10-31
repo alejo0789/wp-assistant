@@ -3,8 +3,8 @@ import re
 
   ###########Read data from stdin ###############################################
 def read_in():
-   # lines = sys.stdin.readlines()
-    lines = ["Almuerzo amigos 50000"]
+    lines = sys.stdin.readlines()
+   # lines = ["Almuerzo amigos 50000"]
    #Since our input would only be having one line, parse our JSON data from that
     text, numbers= separate_text_numbers(lines[0])
     savexls(text, numbers)
@@ -62,7 +62,7 @@ def savexls(description, amount):
   ws['C5'] = current_time
   ws['D5'] = description
   ws['E5'] = amount
-  ws['F5'] = 'Gasto'
+  ws['F5'] = 'Gastos'
  
   wb.save('filesxls/personal_budget.xlsx')
  
