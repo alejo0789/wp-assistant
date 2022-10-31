@@ -60,7 +60,7 @@ app.post("/webhook", (req, res) => {
       
       
        var spawn = require('child_process').spawn,
-    py    = spawn('python', ['pyserver.py']),
+    py    = spawn('python3', ['pyserver.py']),
     data = msg_body,
     dataString = '';
 
