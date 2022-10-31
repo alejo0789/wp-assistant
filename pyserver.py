@@ -31,7 +31,7 @@ def separate_text_numbers(original_text):
       # is_digit = True
        r = str.index(c)
 
-    text= str[0:r-2]
+    text= str[1:r-1]
     
     
     #find the numbers and obtain an array of numbers 
@@ -64,7 +64,7 @@ def savexls(description, amount):
   ws['E5'] = amount
   ws['F5'] = 'Gasto'
   print (description)
-  wb.save('filesxls/personal_budget1.xlsx')
+  wb.save('filesxls/personal_budget2.xlsx')
  
  
   #model_xls= model_xls.loc[2:5]
