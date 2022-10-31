@@ -63,8 +63,8 @@ def savexls(description, amount):
   ws['D5'] = description
   ws['E5'] = amount
   ws['F5'] = 'Gasto'
- 
-  wb.save('filesxls/personal_budget.xlsx')
+  print (description)
+  wb.save('filesxls/personal_budget1.xlsx')
  
  
   #model_xls= model_xls.loc[2:5]
